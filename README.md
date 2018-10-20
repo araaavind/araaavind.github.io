@@ -1,6 +1,2 @@
-# JohnDoe
-A Responsive Free One Page Portfolio Website template
-
-
-
-
+# Aravind Unnikrishnan
+My Personal Responsive Portfolio Website

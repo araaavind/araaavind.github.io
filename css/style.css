@@ -453,7 +453,7 @@ table {
 }
 /* ==========================================================================Hero========================================================================== */
 .hero {
-	background: url('../img/header-bg5.jpg') right bottom no-repeat;
+	background: url('../img/header-bg6.jpg') right bottom no-repeat;
 	background-size: contain;
 	padding:110px 0 100px 0;
 	height:auto;
@@ -483,21 +483,21 @@ table {
 	font-weight: semi-condensed;
 }
 .hero p {
-	letter-spacing:1px;
-	color:#fff;
+	letter-spacing:2px;
+	color:#8e8e8e;
 	font-size: 15px;
 }
 /* Boucing Arrow Animation */
 @keyframes arrowbounce {
 	from {
-		-webkit-transform:translateY(0);
-		-moz-transform:translateY(0);
-		transform:translateY(0);
+		-webkit-transform:translateY(10px);
+		-moz-transform:translateY(10px);
+		transform:translateY(10px);
 	}
 	to {
-		-webkit-transform:translateY(-20px);
-		-moz-transform:translateY(-20px);
-		transform:translateY(-20px);
+		-webkit-transform:translateY(-10px);
+		-moz-transform:translateY(-10px);
+		transform:translateY(-10px);
 	}
 }
 @-moz-keyframes arrowbounce {
@@ -691,6 +691,7 @@ i.respons {
 .responsive-services {
 	position: relative;
 }
+
 /* ==========================================================================Portfolio========================================================================== */
 .swag {
 	padding:75px 0;
@@ -1194,6 +1195,7 @@ ul.slides li {
 	}
 
 	.hero h3 {
+		padding: 10px;
 	    letter-spacing: 10px;
 	}
 
