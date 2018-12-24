@@ -1110,6 +1110,7 @@ ul.slides li {
 }
 /* ==========================================================================Responsive========================================================================== */
 /* 320px (iPhone) */
+
 @media screen and (max-width:1147px) {
 	.scrollto {
 		padding: 95px 0px 0px 0px;
@@ -1118,8 +1119,15 @@ ul.slides li {
 	.hero h1 {
 		font-size: 9vw;
 		line-height: 80px;
-		margin-top: 20px;
+		margin-top: 65px;
 }
+
+@media screen and (max-width:1400px) {
+    .hero h1{
+        letter-spacing: 0.005em;
+    }
+}
+
 }
 /* 480px (WVGA - Low End Windows Phone) */
 @media screen and (max-width:1147px) {
