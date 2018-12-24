@@ -74,7 +74,7 @@
 			  <!-- HEADER HEADLINE -->
               <div class="row">
                 <div class="col-md-8 col-md-offset-1 inner">
-                  <h1 class="animated fadeInDown">
+                  <h1 class="animated fadeInDown" style="font-size:7.5vw">
                     A<span style="color:#E04343;">RA</span>VIND<br/>
                     <span>U<span style="color:#FFE800">NN</span>IKRISHNAN</span>
                   </h1><!-- Title -->
