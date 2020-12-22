@@ -15,7 +15,6 @@ $(document).ready(() => {
 
     $('.scroll-up-btn').click(() => {
         $('html').animate({ scrollTop: 0 });
-        console.log("scroll up");
     });
 
     $('.menu-btn').click( () => {
