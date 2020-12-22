@@ -67,6 +67,28 @@
     display: none;
 }
 
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    right: 40px;
+    bottom: 50px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 45px;
+    z-index: 9999;
+    cursor: pointer;
+    color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* home section styling  */
 
 .home {
@@ -209,6 +231,10 @@ section {
 
 /* contact section styling */
 
+.contact {
+    padding-bottom: 200px;
+}
+
 .contact .contact-content {
     display: flex;
     flex-wrap: wrap;
@@ -333,8 +359,9 @@ footer {
     padding: 20px 23px;
 }
 
-footer .social {
+footer .credit {
     float: right;
+    font-weight: 300;
 }
 
 footer .social i {
@@ -369,6 +396,10 @@ footer .social a:hover {
 
 ::-webkit-scrollbar-corner {
     background: #00000000;
+}
+
+.skills-table::-webkit-scrollbar {
+    background: black;
 }
 
 /* responsive media queries */
