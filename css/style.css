@@ -224,8 +224,6 @@ section {
 /* projects section styling */
 
 .projects .projects-content .left img {
-    /* height: 720px;
-    width: 1280px; */
     object-fit: cover;
 }
 
