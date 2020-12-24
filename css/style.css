@@ -223,8 +223,53 @@ section {
 
 /* projects section styling */
 
-.projects .projects-content .left img {
+.projects .projects-content .item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.projects .projects-content .alt {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.projects .projects-content .item .left {
+    width: 70%;
+}
+
+.projects .projects-content .item .left img {
+    width: 720px;
     object-fit: cover;
+}
+
+.projects .projects-content .item .right {
+    width: 30%;
+}
+
+.projects .projects-content .item .right h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.projects .projects-content .item .right a {
+    display: inline-block;
+    background: #67accf;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 1px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #67accf;
+    transition: all 0.3s ease;
+}
+
+.projects .projects-content .item .right a:hover {
+    color: #67accf;
+    background: none;
 }
 
 /* contact section styling */
@@ -401,6 +446,13 @@ footer .social a:hover {
 }
 
 /* responsive media queries */
+
+@media (max-width: 1280px) {
+    .projects .projects-content .item .left img {
+        width: 600px;
+    }
+}
+
 @media (max-width: 1080px) {
     .max-width {
         padding: 0 50px;
@@ -440,6 +492,10 @@ footer .social a:hover {
         margin: 20px 0;
         font-size: 25px;
     }
+
+    .projects .projects-content .item .left img {
+        width: 500px;
+    }
 }
 
 @media (max-width: 840px) {
@@ -464,6 +520,15 @@ footer .social a:hover {
         width: 100%;
         margin-bottom: 35px;
     }
+
+    .projects .projects-content .item {
+        flex-direction: column;
+    }
+
+    .projects .projects-content .item .column {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media (max-width: 620px) {
@@ -483,6 +548,10 @@ footer .social a:hover {
     .home .home-content .text-2 {
         font-size: 25px;
     }
+
+    .projects .projects-content .item .left img {
+        width: 300px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -490,5 +559,9 @@ footer .social a:hover {
         color: #fff;
         font-size: 30px;
         font-weight: 600;
+    }
+    
+    .projects .projects-content .item .left img {
+        width: 250px;
     }
 }
