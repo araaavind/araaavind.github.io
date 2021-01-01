@@ -546,19 +546,29 @@ footer .social a:hover {
     .skills-table {
         font-size: 14px;
     }
-
-    .contact .contact-content .column {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-
+    
     .projects .projects-content .item {
         flex-direction: column;
     }
-
+    
     .projects .projects-content .item .column {
         width: 100%;
         text-align: center;
+    }
+
+    .projects-table {
+        font-size: 14px;
+    }
+
+    .projects-table th {
+        width: 20%;
+        padding-right: 25px;
+    }
+    
+    .contact .contact-content .column {
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 35px;
     }
 }
 
@@ -582,6 +592,21 @@ footer .social a:hover {
 
     .projects .projects-content .item .left img {
         width: 300px;
+    }
+    
+    .projects-table {
+        font-size: 12px;
+    }
+
+    .projects-table th {
+        width: 15%;
+        padding-right: 15px;
+    }
+
+    .contact .contact-content .column {
+        width: 100%;
+        font-size: 12px;
+        margin-bottom: 35px;
     }
 }
 
