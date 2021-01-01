@@ -303,7 +303,6 @@ section {
 
 .projects-table th {
     padding-right: 50px;
-    width: 30%;
     font-weight: 900;
 }
 
@@ -561,7 +560,6 @@ footer .social a:hover {
     }
 
     .projects-table th {
-        width: 20%;
         padding-right: 25px;
     }
     
@@ -599,7 +597,6 @@ footer .social a:hover {
     }
 
     .projects-table th {
-        width: 15%;
         padding-right: 15px;
     }
 
@@ -622,13 +619,12 @@ footer .social a:hover {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 330px) {
     .projects-table {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .projects-table th {
-        width: 10%;
-        padding-right: 10px;
+        padding-right: 8px;
     }
 }
