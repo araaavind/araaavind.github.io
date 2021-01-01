@@ -621,3 +621,14 @@ footer .social a:hover {
         width: 250px;
     }
 }
+
+@media (max-width: 360px) {
+    .projects-table {
+        font-size: 10px;
+    }
+
+    .projects-table th {
+        width: 10%;
+        padding-right: 10px;
+    }
+}
