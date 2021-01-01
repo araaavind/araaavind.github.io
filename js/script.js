@@ -2,8 +2,10 @@ $(document).ready(() => {
     $(window).scroll(() => {
         if(this.scrollY > 20) {
             $('.navbar').addClass("sticky");
+            $('.logo').css('visibility', "visible");
         } else {
             $('.navbar').removeClass("sticky");
+            $('.logo').css('visibility', "hidden");
         }
 
         if(this.scrollY > 500) {
