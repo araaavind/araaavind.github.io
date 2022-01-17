@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+body {
+    background: #171b20;
+}
+
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
@@ -93,7 +97,7 @@
 
 .home {
     display: flex;
-    background: #171d20;
+    background: #171b20;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -137,7 +141,7 @@ section {
     font-family: 'Poppins', sans-serif;
     color: #fff;
     line-height: 2;
-    background: #171d20;
+    background: #171b20;
 }
 
 .about .title, .skills .title,
@@ -464,7 +468,7 @@ footer .social a:hover {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #171d20;
+    background-color: #171b20;
 }
 
 ::-webkit-scrollbar-thumb {
