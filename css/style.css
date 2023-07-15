@@ -62,7 +62,7 @@ body {
 }
 
 .navbar .menu li a {
-  color: #b4bfcd;
+  color: #d9e2ee;
   font-size: 18px;
   font-weight: 500;
   margin-left: 25px;
@@ -165,7 +165,7 @@ section {
 .contact,
 footer {
   font-family: "Inter", sans-serif;
-  color: #b4bfcd;
+  color: #d9e2ee;
   line-height: 2;
   /* background: #171b20; */
 }
@@ -193,7 +193,7 @@ footer {
 }
 
 .about .about-content p {
-  color: #b4bfcd;
+  color: #d9e2ee;
   font-size: 18px;
   text-align: center;
 }
