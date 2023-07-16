@@ -24,11 +24,11 @@ function populateSkills() {
         marqueeContainer.append(marqueeFirst);
         marqueeContainer.append(marqueeSecond);
       } else if ($(window).width() < 400 && index != 0 && index % 2 == 0) {
-        skillStrip = $(`<div class="skill-strip"></div>`);
+        // skillStrip = $(`<div class="skill-strip"></div>`);
         marqueeContainer = $(`<div class="marquee-container"></div>`);
         marqueeFirst = $(`<div class="marquee first" style="animation: marquee-first ${skills[cat].duration} linear infinite"></div>`);
         marqueeSecond = $(`<div class="marquee second" style="animation: marquee-second ${skills[cat].duration} linear infinite"></div>`);
-        skillContainer.append(skillStrip);
+        // skillContainer.append(skillStrip);
         skillStrip.append(marqueeContainer);
         marqueeContainer.append(marqueeFirst);
         marqueeContainer.append(marqueeSecond);
