@@ -15,7 +15,7 @@ function populateSkills() {
         ($(window).width() > 510 && $(window).width() <= 880 && index != 0 && index % 3 == 0 && (data.length - index - 1) > 1) ||
         ($(window).width() <= 510 && index != 0 && index % 2 == 0)
       ) {
-        createContainer(Math.floor(Math.random() * 80) + 10)
+        createContainer(Math.floor(Math.random() * 55) + 30)
       }
       marqueeFirst.append($(`<span class=skill-span><i class=${skill.icon}></i>${skill.name}</span>`));
       marqueeSecond.append($(`<span class=skill-span><i class=${skill.icon}></i>${skill.name}</span>`));
