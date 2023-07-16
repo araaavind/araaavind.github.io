@@ -15,7 +15,7 @@ html {
 body {
   background-image: url("../img/bg.jpg");
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .container {
@@ -27,7 +27,7 @@ body {
     rgba(11, 31, 53, 0.855) 75%,
     rgb(13, 24, 35) 100%
   );
-  /* background: #171b20d3; */
+  /* background: #171b2000; */
 }
 
 .max-width {
@@ -48,7 +48,7 @@ body {
 .navbar.sticky {
   padding: 15px 0;
   background: rgba(107, 128, 156, 0.3);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(107, 128, 156, 0.4);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.35);
 }
@@ -535,6 +535,22 @@ footer {
 }
 
 .contact .right .text {
+  color: #d9e2ee;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #d9e2eea4;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #d9e2ee;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
   color: #d9e2ee;
 }
 

@@ -1,37 +1,21 @@
-
+let skillStrip, marqueeContainer, marqueeFirst, marqueeSecond;
 function populateSkills() {
-  for (const cat in skills) {
+  for (const category in skills) {
     const skillContainer = $(`<div class="skill-container"></div>`);
-    const skillCategory = $(`<div class="skill-category"><span class="category-text">${cat}</span></div>`);
+    const skillCategory = $(`<div class="skill-category"><span class="category-text">${category}</span></div>`);
     skillContainer.append(skillCategory);
-    let skillStrip = $(`<div class="skill-strip"></div>`);
-    let marqueeContainer = $(`<div class="marquee-container"></div>`);
-    let marqueeFirst = $(`<div class="marquee first" style="animation: marquee-first ${skills[cat].duration} linear infinite"></div>`);
-    let marqueeSecond = $(`<div class="marquee second" style="animation: marquee-second ${skills[cat].duration} linear infinite"></div>`);
+    skillStrip = $(`<div class="skill-strip"></div>`);
     skillContainer.append(skillStrip);
-    skillStrip.append(marqueeContainer);
-    marqueeContainer.append(marqueeFirst);
-    marqueeContainer.append(marqueeSecond);
+    createContainer(Math.floor(Math.random() * 30) + 30);
 
-    skills[cat].data.forEach((skill, index) => {
-      if ($(window).width() < 1400 && index != 0 && index % 4 == 0) {
-        // skillStrip = $(`<div class="skill-strip"></div>`);
-        marqueeContainer = $(`<div class="marquee-container"></div>`);
-        marqueeFirst = $(`<div class="marquee first" style="animation: marquee-first ${skills[cat].duration} linear infinite"></div>`);
-        marqueeSecond = $(`<div class="marquee second" style="animation: marquee-second ${skills[cat].duration} linear infinite"></div>`);
-        // skillContainer.append(skillStrip);
-        skillStrip.append(marqueeContainer);
-        marqueeContainer.append(marqueeFirst);
-        marqueeContainer.append(marqueeSecond);
-      } else if ($(window).width() < 400 && index != 0 && index % 2 == 0) {
-        // skillStrip = $(`<div class="skill-strip"></div>`);
-        marqueeContainer = $(`<div class="marquee-container"></div>`);
-        marqueeFirst = $(`<div class="marquee first" style="animation: marquee-first ${skills[cat].duration} linear infinite"></div>`);
-        marqueeSecond = $(`<div class="marquee second" style="animation: marquee-second ${skills[cat].duration} linear infinite"></div>`);
-        // skillContainer.append(skillStrip);
-        skillStrip.append(marqueeContainer);
-        marqueeContainer.append(marqueeFirst);
-        marqueeContainer.append(marqueeSecond);
+    const { data } = skills[category];
+    data.forEach((skill, index) => {
+      if (($(window).width() > 980 && $(window).width() <= 1400 && index != 0 && index % 5 == 0 && (data.length - index - 1) > 3) ||
+        ($(window).width() > 880 && $(window).width() <= 980 && index != 0 && index % 4 == 0 && (data.length - index - 1) > 2) ||
+        ($(window).width() > 510 && $(window).width() <= 880 && index != 0 && index % 3 == 0 && (data.length - index - 1) > 1) ||
+        ($(window).width() <= 510 && index != 0 && index % 2 == 0)
+      ) {
+        createContainer(Math.floor(Math.random() * 80) + 10)
       }
       marqueeFirst.append($(`<span class=skill-span><i class=${skill.icon}></i>${skill.name}</span>`));
       marqueeSecond.append($(`<span class=skill-span><i class=${skill.icon}></i>${skill.name}</span>`));
@@ -40,6 +24,15 @@ function populateSkills() {
   }
 }
 populateSkills();
+
+function createContainer(duration) {
+  marqueeContainer = $(`<div class="marquee-container"></div>`);
+  marqueeFirst = $(`<div class="marquee first" style="animation: marquee-first ${duration}s linear infinite"></div>`);
+  marqueeSecond = $(`<div class="marquee second" style="animation: marquee-second ${duration}s linear infinite"></div>`);
+  skillStrip.append(marqueeContainer);
+  marqueeContainer.append(marqueeFirst);
+  marqueeContainer.append(marqueeSecond);
+}
 
 $(document).ready(() => {
   $(window).scroll(() => {
