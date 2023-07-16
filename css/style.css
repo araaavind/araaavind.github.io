@@ -8,6 +8,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url("../img/bg.jpg");
   background-size: cover;
@@ -17,9 +21,11 @@ body {
 .container {
   background: linear-gradient(
     135deg,
-    #171b20e0 0%,
-    #1b2f47ab 60%,
-    #0e1318f4 100%
+    rgb(4, 16, 34) 0%,
+    rgba(11, 36, 63, 0.9) 45%,
+    rgba(15, 33, 58, 0.881) 50%,
+    rgba(11, 31, 53, 0.855) 75%,
+    rgb(13, 24, 35) 100%
   );
   /* background: #171b20d3; */
 }
@@ -41,7 +47,31 @@ body {
 
 .navbar.sticky {
   padding: 15px 0;
-  background: #6c819ce3;
+  background: rgba(107, 128, 156, 0.3);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(107, 128, 156, 0.4);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.navbar.sticky::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 10%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 90%
+  );
+  transition: all 0.7s ease;
+  pointer-events: none;
+}
+
+.navbar.sticky:hover::before {
+  left: 25%;
 }
 
 .navbar .max-width {
@@ -213,9 +243,12 @@ footer {
 
 .skills-content {
   text-align: -webkit-center;
-  line-height: 2.5;
+  line-height: 2.25;
+  font-size: 16px;
   overflow-x: auto;
   white-space: nowrap;
+
+  animation: scroll 10s linear 1s infinite;
 }
 
 .skills-content::-webkit-scrollbar {
@@ -230,6 +263,11 @@ footer {
   padding: 20px 0px;
   text-align: left;
 }
+@keyframes scroll {
+  100% {
+    left: -360px;
+  } /* top is the number of spans (in this case 8) multiplied by span height (45px as described above)*/
+}
 
 .skills-table th,
 .skills-table td {
@@ -237,6 +275,7 @@ footer {
 }
 
 .skills-table th {
+  line-height: 2.25;
   font-weight: 900;
   color: #91add3;
 }
@@ -304,7 +343,7 @@ footer {
   display: inline-block;
   background: #91add340;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   padding: 4px 20px;
   margin-top: 20px;
@@ -318,13 +357,25 @@ footer {
   background: #91add328;
 }
 
+.projects .title-other {
+  margin-top: 75px;
+}
+
 .projects-table {
   padding: 20px 0px;
   text-align: left;
+  line-height: 2;
 }
 
 .projects-table td {
   padding: 20px 0px;
+}
+
+.projects-table td .vh {
+  display: none;
+  color: #d9e2ee;
+  padding-bottom: 8px;
+  font-weight: 900;
 }
 
 .projects-table td a {
@@ -475,6 +526,9 @@ footer {
 /* footer section styling */
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
   font-size: 14px;
   background: #0e1318f4;
   padding: 20px 23px;
@@ -482,11 +536,18 @@ footer {
 
 footer .credit {
   color: #d9e2ee;
+  padding: 0px 20px;
   float: right;
   font-weight: 300;
+  text-align: right;
 }
 
-footer .social i {
+footer .social {
+  text-align: left;
+  padding: 0px 20px;
+}
+
+footer .social a i {
   padding: 0 10px;
 }
 
@@ -502,7 +563,8 @@ footer .social a:hover {
 /* custom scroll bar */
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar:hover {
@@ -569,6 +631,19 @@ footer .social a:hover {
     font-size: 25px;
   }
 
+  .home .home-content .text-2 {
+    font-size: 20px;
+  }
+
+  .about .about-content p {
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  .skills-content {
+    line-height: 2;
+  }
+
   .projects .projects-content .item .left img {
     width: 500px;
   }
@@ -585,15 +660,20 @@ footer .social a:hover {
   }
 
   .home .home-content .text-2 {
-    font-size: 35px;
+    font-size: 18px;
   }
 
   .home .home-content .text-2 .name {
-    font-size: 35px;
+    font-size: 72px;
   }
 
-  .skills-table {
-    font-size: 14px;
+  .about .about-content p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .skills-content {
+    line-height: 1.8;
   }
 
   .projects .projects-content .item {
@@ -606,21 +686,46 @@ footer .social a:hover {
   }
 
   .projects-table {
-    font-size: 14px;
+    line-height: 1.8;
   }
 
   .projects-table th {
+    display: none;
     padding-right: 25px;
+  }
+
+  .projects-table td .vh {
+    display: block;
   }
 
   .contact .contact-content .column {
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 35px;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  footer .credit {
+    padding: 0;
+    text-align: center;
+    color: #d9e2ee93;
+  }
+
+  footer .social {
+    padding: 0;
+    text-align: center;
   }
 }
 
 @media (max-width: 620px) {
+  .max-width {
+    padding: 0 32px;
+  }
+
   .home .max-width {
     margin-left: 0;
   }
@@ -635,33 +740,93 @@ footer .social a:hover {
   }
 
   .home .home-content .text-2 {
-    font-size: 25px;
+    font-size: 18px;
+  }
+
+  .home .home-content .text-2 .name {
+    font-size: 64px;
+  }
+
+  .about .about-content p {
+    font-size: 16px;
+    line-height: 1.625;
+  }
+
+  .about .title,
+  .skills .title,
+  .publications .title,
+  .projects .title,
+  .contact .title {
+    text-align: left;
+    font-size: 28px;
+    margin-bottom: 0px;
+  }
+
+  .about .about-content p {
+    text-align: left;
+  }
+
+  .skills-table th,
+  .skills-table td {
+    padding: 0 40px 0 0;
+  }
+
+  .pubs-content {
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.625;
+  }
+
+  .pubs-content h3 a {
+    font-size: 20px;
+    line-height: 1.625;
+  }
+
+  .projects-content {
+    font-size: 16px;
+  }
+
+  .projects .projects-content .item {
+    margin-top: 20px;
+    padding-bottom: 60px;
+  }
+
+  .projects .title-other {
+    margin-top: 40px;
   }
 
   .projects .projects-content .item .left img {
     width: 300px;
   }
 
-  .projects-table {
-    font-size: 12px;
-  }
-
-  .projects-table th {
-    padding-right: 15px;
+  .projects-table td {
+    line-height: 1.625;
   }
 
   .contact .contact-content .column {
     width: 100%;
-    font-size: 12px;
     margin-bottom: 35px;
   }
 }
 
 @media (max-width: 480px) {
+  .max-width {
+    padding: 0 24px;
+  }
+
   .navbar .logo a {
     color: #fff;
     font-size: 30px;
     font-weight: 600;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 16px;
+  }
+
+  .home .home-content .text-2 .name {
+    font-weight: 600;
+    font-size: 48px;
   }
 
   .projects .projects-content .item .left img {
@@ -669,12 +834,70 @@ footer .social a:hover {
   }
 }
 
-@media (max-width: 330px) {
-  .projects-table {
-    font-size: 11px;
+@media (max-width: 380px) {
+  .home .home-content .text-2 {
+    font-size: 16px;
   }
 
-  .projects-table th {
-    padding-right: 8px;
+  .home .home-content .text-2 .name {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 330px) {
+  .home .home-content .text-2 {
+    font-size: 14px;
+  }
+
+  .home .home-content .text-2 .name {
+    font-size: 32px;
+  }
+
+  .about .about-content p {
+    font-size: 12px;
+  }
+
+  .about .about-content a {
+    font-size: 12px;
+  }
+
+  .skills-content {
+    font-size: 12px;
+  }
+
+  .pubs-content h3 a {
+    font-size: 16px;
+  }
+
+  .pubs-content {
+    font-size: 12px;
+  }
+
+  .projects-content {
+    font-size: 12px;
+  }
+
+  .projects .projects-content .item .right h3 {
+    font-size: 20px;
+  }
+
+  .projects .projects-content .item .right a {
+    font-size: 12px;
+  }
+
+  .projects .projects-content .item .left img {
+    width: 200px;
+  }
+
+  .projects-table {
+    font-size: 12px;
+  }
+
+  .contact .contact-content .column {
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 12px;
   }
 }
