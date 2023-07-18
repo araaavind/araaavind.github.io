@@ -6,7 +6,7 @@ function populateSkills() {
     skillContainer.append(skillCategory);
     skillStrip = $(`<div class="skill-strip"></div>`);
     skillContainer.append(skillStrip);
-    createContainer(Math.floor(Math.random() * 30) + 30);
+    createContainer(Math.floor(Math.random() * 8) + 8);
 
     const { data } = skills[category];
     data.forEach((skill, index) => {
@@ -15,7 +15,7 @@ function populateSkills() {
         ($(window).width() > 510 && $(window).width() <= 880 && index != 0 && index % 3 == 0 && (data.length - index - 1) > 1) ||
         ($(window).width() <= 510 && index != 0 && index % 2 == 0)
       ) {
-        createContainer(Math.floor(Math.random() * 80) + 10)
+        createContainer(Math.floor(Math.random() * 8) + 8)
       }
       marqueeFirst.append($(`<span class=skill-span><i class=${skill.icon}></i>${skill.name}</span>`));
       marqueeSecond.append($(`<span class=skill-span><i class=${skill.icon}></i>${skill.name}</span>`));
