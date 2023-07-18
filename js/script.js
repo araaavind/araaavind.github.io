@@ -34,6 +34,8 @@ function createContainer(duration) {
   marqueeContainer.append(marqueeSecond);
 }
 
+let slideMenuActive = false;
+
 $(document).ready(() => {
   $(window).scroll(() => {
     if (this.scrollY > 20) {
@@ -52,11 +54,22 @@ $(document).ready(() => {
   });
 
   $('.scroll-up-btn').click(() => {
-    $('html').animate({ scrollTop: 0 });
+    $('html').animate({ scrollTop: 0 }, { duration: 10 });
   });
 
   $('.menu-btn').click(() => {
     $('.navbar .menu').toggleClass("active");
     $('.menu-btn i').toggleClass("active");
+    $('body').toggleClass("no-scroll");
+    slideMenuActive = !slideMenuActive;
+  });
+
+  $('.navbar .menu li').click(() => {
+    if (slideMenuActive) {
+      $('.navbar .menu').toggleClass("active");
+      $('.menu-btn i').toggleClass("active");
+      $('body').toggleClass("no-scroll");
+      slideMenuActive = !slideMenuActive;
+    }
   });
 });
