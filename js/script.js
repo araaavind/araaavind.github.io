@@ -17,8 +17,8 @@ function populateSkills() {
       ) {
         createContainer(Math.floor(Math.random() * 8) + 8)
       }
-      marqueeFirst.append($(`<span class=skill-span><i class=${skill.icon}></i>${skill.name}</span>`));
-      marqueeSecond.append($(`<span class=skill-span><i class=${skill.icon}></i>${skill.name}</span>`));
+      marqueeFirst.append($(`<span class=skill-span><a href=${skill.url} target="_blank"><i class=${skill.icon}></i>${skill.name}</a></span>`));
+      marqueeSecond.append($(`<span class=skill-span><a href=${skill.url} target="_blank"><i class=${skill.icon}></i>${skill.name}</a></span>`));
     });
     $('.skills').children('.max-width').append(skillContainer);
   }
