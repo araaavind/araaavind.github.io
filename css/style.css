@@ -277,7 +277,17 @@ footer {
   padding-right: 24px;
 }
 
-.skill-span i {
+.skill-span a {
+  color: #91add3;
+  text-decoration: none;
+}
+
+.skill-span a:hover {
+  color: #91add3aa;
+  text-decoration: none;
+}
+
+.skill-span a i {
   font-size: 20px;
   padding-right: 8px;
 }
