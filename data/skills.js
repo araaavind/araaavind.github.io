@@ -88,11 +88,6 @@ const skills = {
         "url": "https://redis.io/"
       },
       {
-        "name": "Docker",
-        "icon": "devicon-docker-plain",
-        "url": "https://www.docker.com/"
-      },
-      {
         "name": "NGINX",
         "icon": "devicon-nginx-original",
         "url": "https://www.nginx.com/"
@@ -181,6 +176,11 @@ const skills = {
         "name": "Bash",
         "icon": "devicon-bash-plain",
         "url": "https://www.gnu.org/software/bash/"
+      },
+      {
+        "name": "Docker",
+        "icon": "devicon-docker-plain",
+        "url": "https://www.docker.com/"
       },
       {
         "name": "Git",
