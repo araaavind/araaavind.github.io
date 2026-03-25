@@ -409,19 +409,16 @@ footer {
 
 .projects .projects-content .item {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 80px;
+  gap: 60px;
 }
 
 .projects .projects-content .alt {
   flex-direction: row-reverse;
   text-align: right;
-}
-
-.projects .projects-content .item .left {
-  width: 70%;
 }
 
 .projects .projects-content .item .left img {
@@ -434,7 +431,7 @@ footer {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   width: 100%;
-  max-width: 720px;
+  max-width: 540px;
   margin: 0 auto;
 }
 
@@ -450,7 +447,7 @@ footer {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   width: 100%;
-  max-width: 720px;
+  max-width: 540px;
   margin: 0 auto;
 }
 
@@ -466,20 +463,15 @@ footer {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   width: 100%;
-  max-width: 720px;
+  max-width: 540px;
   margin: 0 auto;
 }
 
 .projects .projects-content .item.lifegrid-item .left .lifegrid-grid img {
   width: 100%;
   object-fit: cover;
-  border: 1px solid #3f4f63;
+  border: 1px solid #4d5a61;
   border-radius: 8px;
-}
-
-.projects .projects-content .item.lifegrid-item {
-  flex-direction: row-reverse;
-  text-align: left;
 }
 
 .projects .projects-content .item .right {
@@ -809,10 +801,6 @@ footer .social a:hover {
     border-bottom: 1px solid rgba(107, 128, 156, 0.4);
   }
 
-  .navbar .menu li:first-child {
-    /* margin-top: 24px; */
-  }
-
   .navbar .menu li:last-child {
     border-bottom: none;
     margin-bottom: 80px;
@@ -873,10 +861,6 @@ footer .social a:hover {
   }
 
   .projects .projects-content .item {
-    flex-direction: column;
-  }
-
-  .projects .projects-content .item.lifegrid-item {
     flex-direction: column;
   }
 
