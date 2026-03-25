@@ -429,6 +429,59 @@ footer {
   object-fit: cover;
 }
 
+.projects .projects-content .item.avocad-item .left .avocad-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.projects .projects-content .item.avocad-item .left .avocad-grid img {
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid #525338;
+  border-radius: 8px;
+}
+
+.projects .projects-content .item.f1x-item .left .f1x-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.projects .projects-content .item.f1x-item .left .f1x-grid img {
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid #3f4f63;
+  border-radius: 8px;
+}
+
+.projects .projects-content .item.lifegrid-item .left .lifegrid-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.projects .projects-content .item.lifegrid-item .left .lifegrid-grid img {
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid #3f4f63;
+  border-radius: 8px;
+}
+
+.projects .projects-content .item.lifegrid-item {
+  flex-direction: row-reverse;
+  text-align: left;
+}
+
 .projects .projects-content .item .right {
   width: 30%;
 }
@@ -454,6 +507,10 @@ footer {
 .projects .projects-content .item .right a:hover {
   color: #91add3;
   background: #91add328;
+}
+
+.projects .projects-content .item .right a + a {
+  margin-left: 10px;
 }
 
 .projects .title-other {
@@ -816,6 +873,10 @@ footer .social a:hover {
   }
 
   .projects .projects-content .item {
+    flex-direction: column;
+  }
+
+  .projects .projects-content .item.lifegrid-item {
     flex-direction: column;
   }
 
